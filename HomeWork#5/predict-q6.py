@@ -4,7 +4,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 
-model_file = 'model1.bin'
+model_file = 'model2.bin'
 dv_file = 'dv.bin'
 
 with open(model_file, 'rb') as mf_in:
@@ -17,7 +17,7 @@ with open(dv_file, 'rb') as dvf_in:
 app = Flask('churn')
 
 
-@app.route('/predict-q4', methods=['POST'])
+@app.route('/predict-q6', methods=['POST'])
 def predict():
     customer = request.get_json()
 

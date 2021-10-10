@@ -1,5 +1,4 @@
 
-
 import pickle
 
 model_file = 'model1.bin'

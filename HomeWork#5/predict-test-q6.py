@@ -1,12 +1,12 @@
 import requests
 
 
-url = 'http://0.0.0.0:8888/predict-q4'
+url = 'http://0.0.0.0:8888/predict-q6'
 
-customer_id = 'xyz-123'
+customer_id = 'xyz-125'
 customer = {
     "contract": "two_year",
-    "tenure": 1,
+    "tenure": 12,
     "monthlycharges": 10
 }
 
