@@ -85,8 +85,15 @@ Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-hom
 # RUNNING INSTRUCTION
 1. Copying scripts (train, predict and predict-test), pipenv file and Dockerfile to a folder
 2. Running Windows Terminal Linux
-3. install `pipenv`
+3. Install `pipenv`
 ```
 pip install pipenv
 ```
-
+4. Install essential packages
+```
+pipenv install numpy pandas scikit-learn==1.0 flask xgboost
+```
+5.Install Docker
+ - SingUp for a DockerID in [Docker](https://hub.docker.com/)
+ - Download & Intall Docker Desktop
+ - 
