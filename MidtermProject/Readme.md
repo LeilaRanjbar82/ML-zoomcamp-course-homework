@@ -1,5 +1,5 @@
 # PROJECT DESCRIPTION
-This project performed as part of the ML Zoomcamp course, Midterm Project. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
+This project performed as part of the _ML Zoomcamp Course_, Midterm Project. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
 
 
 ## Health Insurance Cross-Sell Prediction
@@ -11,9 +11,9 @@ This Model was built using [kaggle Dataset](https://bit.ly/3bEwA5D).
 ### Task Detail
 Auto insurance is a contract between customer and the insurance company that protects policyholder against financial loss in the event of an accident or theft. In exchange for paying a premium, the insurance company agrees to pay customer's losses as outlined in the policy.
 
-In this project, the client is a _Health Insurance company_ which provides health insurance for its customers. Now, they needs a model to predict if their last-year customers want to have their vehicle contract with this company or not.
+In this project, the client is a _Health Insurance company_ which provides health insurance. They need a model to predict if their last-year customers want to have their vehicle contract with this company or not.
 
-Prediction model helps the company to expand their business and plan their communication strategies to have more policyholders. So, they collect some information about the customers and their previous vehicle insurance contract and the payments to build the prediction model. The following is the informations.
+Prediction model helps the company to expand their business and plan their communication strategies to have more policyholders. So, they collect some information about the customers and their previous vehicle insurance and premium to build the prediction model.
 
 ### Data Description
 Following is the features used for the prediction model. The _Response_ shows the target value.
@@ -24,7 +24,7 @@ Following is the features used for the prediction model. The _Response_ shows th
 |Id|Unique ID for the customer|
 |Gender|Gender of the customer|
 |Age|Age of the customer|
-|Driving_License|0 : Customer does not have DL, 1 : Customer already has DL|
+|Driving_License|1 : Customer already has DL, 0 : Customer does not have DL|
 |Region_Code|Unique code for the region of the customer|
 |Previously_Insured|1 : Customer already has Vehicle Insurance, 0 : Customer doesn't have Vehicle Insurance|
 |Vehicle_Age|Age of the Vehicle|
@@ -83,8 +83,8 @@ Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-hom
 |Dockerfile|Environment management, Docker, for running file|
 
 # RUNNING INSTRUCTION
-1. Copying scripts (train, predict and predict-test), pipenv file and Dockerfile to a folder
-2. Running Windows Terminal Linux (WSL2) in the that folder
+1. Copy scripts (train, predict and predict-test), pipenv file and Dockerfile to a folder
+2. Run Windows Terminal Linux (WSL2) in the that folder
 3. Install `pipenv`
 ```
 pip install pipenv
