@@ -1,7 +1,7 @@
 # Health Insurance Cross-Sell Prediction
 Cross-Sell Prediction help _Health Insurance Companies_ predicting which customers may interest in Vehicle Insurance contract extension.
 
-## Dataset Refrence:
+## Dataset Reference:
 This Model was built using [kaggle Dataset](https://bit.ly/3bEwA5D).
 
 ## Task Detail
@@ -12,6 +12,8 @@ In this project, the client is a _Health Insurance company_ which provides healt
 Prediction model helps the company to expand their business and plan their communication strategies to have more policyholders. So, they collect some information about the customers and their previous vehicle insurance contract and the payments to build the prediction model. The following is the informations.
 
 ## Data Description
+Following is the features used for the prediction model. The _Response_ shows the target value.
+
 
 | Features | Definitions |
 |---|---|
@@ -27,3 +29,8 @@ Prediction model helps the company to expand their business and plan their commu
 |PolicySalesChannel|Anonymized Code for the channel of outreaching to the customer ie. Different Agents, Over Mail, Over Phone, In Person, etc.|
 |Vintage|Number of Days, Customer has been associated with the company|
 |Response|1 : Customer is interested, 0 : Customer is not interested|
+
+### Features' characteristics
+Features' characteristics are provided in [DataAnalysis_Insurance](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/blob/main/MidtermProject/DataAnalysis_insurance.ipynb)
+
+Categorical Features:
