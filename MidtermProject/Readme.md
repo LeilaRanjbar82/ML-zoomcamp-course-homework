@@ -86,33 +86,33 @@ Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-hom
 1. Copy scripts (train, predict and predict-test), pipenv file and Dockerfile to a folder
 2. Run Windows Terminal Linux (WSL2) in the that folder
 3. Install `pipenv`
-```
-pip install pipenv
-```
+   ```
+   pip install pipenv
+   ```
 4. Install essential packages
-```
-pipenv install numpy pandas scikit-learn==1.0 flask xgboost
-```
+   ```
+   pipenv install numpy pandas scikit-learn==1.0 flask xgboost
+   ```
 5. Install Docker
  - SingUp for a DockerID in [Docker](https://hub.docker.com/)
  - Download & Intall [Docker Desktop](https://docs.docker.com/desktop/windows/install/)
  
 6. In WSL2 run the following command to create the image `zoomcamp-midproj'
-```
-docker build -t zoomcamp-midproj .
-```
+   ```
+   docker build -t zoomcamp-midproj .
+   ```
 7. Run Docker to loading model
-```
-docker run -it --rm -p 8889:8889 zoomcamp-midproj
-```
-(Maybe need to change the port is scripts and Dockerfile due to the system)
+   ```
+   docker run -it --rm -p 8889:8889 zoomcamp-midproj
+   ```
+   (Maybe need to change the port is scripts and Dockerfile due to the system)
 
 8. In another WSL tab run the test 
-```
-python predict-test.py
-```
+   ```
+   python predict-test.py
+   ```
 9. The Result would be
-```
-Customer is NOT interested in Vehicle Insurance provided by the company
-```
+   ```
+   Customer is NOT interested in Vehicle Insurance provided by the company
+   ```
   
