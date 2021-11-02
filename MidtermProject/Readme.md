@@ -1,3 +1,6 @@
+This project performed as part of the ML Zoomcamp course. This course is conducted by [Alexey Grigorev](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp)
+
+
 # Health Insurance Cross-Sell Prediction
 Cross-Sell Prediction help _Health Insurance Companies_ predicting which customers may interest in Vehicle Insurance contract extension.
 
