@@ -30,9 +30,10 @@ Following is the features used for the prediction model. The _Response_ shows th
 |Vintage|Number of Days, Customer has been associated with the company|
 |Response|1 : Customer is interested, 0 : Customer is not interested|
 
-### Features' characteristics
+### Features' Characteristics
 Features' characteristics are provided in [DataAnalysis_Insurance](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/blob/main/MidtermProject/DataAnalysis_insurance.ipynb)
 
+**1. Features Type**
 |Categorical|Numerical|
 |---|---|
 |gender|age|
@@ -40,3 +41,24 @@ Features' characteristics are provided in [DataAnalysis_Insurance](https://githu
 |driving_license|annual_premium|
 |vehicle_damage|policy_sales_channel|
 |vehicle_age|vintage|
+
+**2.Correlated Features**
+
+_AGE_ had the highest correaltion with _RESPONSE_
+
+**3.High-Risk Features**
+
+_VEHICLE_AGE: More than 2 years_, _VEHICLE_DAMAGE:yes_, _PREVIOUSLY_INSURED:no_ had the highest risks, respectively.
+
+**4.Mutual Informaton**
+
+_PREVIOUSLY_INSURED_ had the highest mutual information.
+
+
+## Evaluation Metrics
+_AUC_ROC_Curve_ and _RMSE_ were used as evaluation Metrics.
+
+## Prediction Model
+By evaluating different models, _XGBoost_ achieved the best rank.
+
+
