@@ -1,4 +1,4 @@
-This project performed as part of the ML Zoomcamp course. This course is conducted by [Alexey Grigorev](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp)
+This project performed as part of the ML Zoomcamp course, Midterm Project. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
 
 
 # Health Insurance Cross-Sell Prediction
@@ -34,7 +34,7 @@ Following is the features used for the prediction model. The _Response_ shows th
 |Response|1 : Customer is interested, 0 : Customer is not interested|
 
 ### Features' Characteristics
-Features' characteristics are provided in [DataAnalysis_Insurance](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/blob/main/MidtermProject/DataAnalysis_insurance.ipynb)
+Features' characteristics are provided in [DataAnalysis_Insurance](https://bit.ly/3ExkHei)
 
 **1. Features Type**
 |Categorical|Numerical|
@@ -62,6 +62,6 @@ _PREVIOUSLY_INSURED_ had the highest mutual information.
 _AUC_ROC_Curve_ and _RMSE_ were used as evaluation Metrics.
 
 ## Prediction Model
-By evaluating different models, _XGBoost_ achieved the best rank.
+By evaluating different models, _XGBoost_ achieved the best result.
 
 
