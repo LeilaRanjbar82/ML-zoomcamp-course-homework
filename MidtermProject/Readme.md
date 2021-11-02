@@ -11,5 +11,10 @@ In this project, the client is a _Health Insurance company_ which provides healt
 
 Prediction model helps the company to expand their business and plan their communication strategies to have more policyholders. So, they collect some information about the customers and their previous vehicle insurance contract and the payments to build the prediction model. The following is the informations.
 
-## Customers Information
+## Customer's Information
+
+| Features | Definitions |
+|---|---|
+|Id|Unique ID for the customer|
+|Gender|Gender of the customer|
 
