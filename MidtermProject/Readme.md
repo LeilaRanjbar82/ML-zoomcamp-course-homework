@@ -66,8 +66,7 @@ _AUC_ROC_Curve_ and _RMSE_ were used as evaluation Metrics.
 By evaluating different models, _XGBoost_ achieved the best result.
 
 
-# RUNNING INSTRUCTION
-## File Description
+# FILE DESCRIPTION
 
 Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/tree/main/MidtermProject) includes following files:
 
@@ -83,6 +82,6 @@ Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-hom
 |Pipfile & Pipfile.lock|Python virtual environment, Pipenv file|
 |Dockerfile|Environment management, Docker, for running file|
 
-
+# RUNNING INSTRUCTION
 
 
