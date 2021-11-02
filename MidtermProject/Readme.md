@@ -106,6 +106,7 @@ docker build -t zoomcamp-midproj .
 docker run -it --rm -p 8889:8889 zoomcamp-midproj
 ```
 (Maybe need to change the port is scripts and Dockerfile due to the system)
+
 8. In another WSL tab run the test 
 ```
 python predict-test.py
