@@ -33,4 +33,10 @@ Following is the features used for the prediction model. The _Response_ shows th
 ### Features' characteristics
 Features' characteristics are provided in [DataAnalysis_Insurance](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/blob/main/MidtermProject/DataAnalysis_insurance.ipynb)
 
-Categorical Features:
+|Categorical|Numerical|
+|---|---|
+|gender|age|
+|previously_insured|region_code|
+|driving_license|annual_premium|
+|vehicle_damage|policy_sales_channel|
+|vehicle_age|vintage|
