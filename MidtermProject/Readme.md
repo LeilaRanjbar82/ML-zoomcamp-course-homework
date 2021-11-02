@@ -34,8 +34,8 @@ Following is the features used for the prediction model. The _Response_ shows th
 |Vintage|Number of Days, Customer has been associated with the company|
 |Response|1 : Customer is interested, 0 : Customer is not interested|
 
-#### Features' Characteristics
-Features' characteristics are provided in [DataAnalysis_Insurance](https://bit.ly/3ExkHei)
+### Features Characteristics
+Features characteristics are provided in [DataAnalysis_Insurance](https://bit.ly/3ExkHei)
 
 **1. Features Type**
 |Categorical|Numerical|
@@ -83,5 +83,10 @@ Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-hom
 |Dockerfile|Environment management, Docker, for running file|
 
 # RUNNING INSTRUCTION
-
+1. Copying scripts (train, predict and predict-test), pipenv file and Dockerfile to a folder
+2. Running Windows Terminal Linux
+3. install `pipenv`
+```
+pip install pipenv
+```
 
