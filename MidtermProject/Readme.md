@@ -19,7 +19,7 @@ Prediction model helps the company to expand their business and plan their commu
 Following is the features used for the prediction model. The _Response_ shows the target value.
 
 
-| Features | Definitions |
+| **Features** | **Definitions** |
 |---|---|
 |Id|Unique ID for the customer|
 |Gender|Gender of the customer|
@@ -38,7 +38,7 @@ Following is the features used for the prediction model. The _Response_ shows th
 Features characteristics are provided in [DataAnalysis_Insurance](https://bit.ly/3ExkHei)
 
 **1. Features Type**
-|Categorical|Numerical|
+|**Categorical**|**Numerical**|
 |---|---|
 |gender|age|
 |previously_insured|region_code|
@@ -64,13 +64,21 @@ _AUC_ROC_Curve_ and _RMSE_ were used as evaluation Metrics.
 
 ### Prediction Model
 By evaluating different models, _XGBoost_ achieved the best result.
+|**Model**|**RMSE**|**AUC**|
+|---|---|---|
+|Logistic_Regression|0.3273|0.5944|
+|Ridge_Regression|0.3056|0.8186|
+|Decision Tree|0.2998|0.8376|
+|Random_Forest|0.2988|0.8421|
+|***XGBoost***|***0.2982***|***0.8445***|
+
 
 
 # FILE DESCRIPTION
 
 Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/tree/main/MidtermProject) includes following files:
 
-|File Name|Description|
+|**File Name**|**Description**|
 |---|---|
 |insurance_prediction.csv|Dataset|
 |DataAnalysis_insurance.ipynb|Exploratory Data Analysis & Feature important Analysis|
