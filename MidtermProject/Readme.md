@@ -69,20 +69,17 @@ By evaluating different models, _XGBoost_ achieved the best result.
 # RUNNING INSTRUCTION
 ## File Description
 Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/tree/main/MidtermProject) includes following files:
-|File Name|Description|link|
-|---|---|---|
-|insurance_prediction.csv|Dataset|insurance data|
-|DataAnalysis_insurance.ipynb|Exploratory Data Analysis & Feature important Analysis|DataAnalysis_insurance|
-|notebook.ipynb|Data preparation and cleaning & Model selection|notebook|
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|
+|File Name|Description|
+|insurance_prediction.csv|Dataset|
+|DataAnalysis_insurance.ipynb|Exploratory Data Analysis & Feature important Analysis|
+|notebook.ipynb|Data preparation and cleaning & Model selection|
+|train.py|Training the final model|
+|model.bin|Saved model by pickle|
+|predict.py|Loading the model &Serving it via a web serice (with Flask)|
+|predict-test.py|Testing the model|
+|Pipfile & Pipfile.lock|Python virtual environment, Pipenv file|
+|Dockerfile|Environment management, Docker, for running file|
+
 
 
 
