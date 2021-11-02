@@ -1,20 +1,21 @@
+# PROJECT DESCRIPTION
 This project performed as part of the ML Zoomcamp course, Midterm Project. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
 
 
-# Health Insurance Cross-Sell Prediction
+## Health Insurance Cross-Sell Prediction
 Cross-Sell Prediction help _Health Insurance Companies_ predicting which customers may interest in Vehicle Insurance contract extension.
 
-## Dataset Reference:
+### Dataset Reference:
 This Model was built using [kaggle Dataset](https://bit.ly/3bEwA5D).
 
-## Task Detail
+### Task Detail
 Auto insurance is a contract between customer and the insurance company that protects policyholder against financial loss in the event of an accident or theft. In exchange for paying a premium, the insurance company agrees to pay customer's losses as outlined in the policy.
 
 In this project, the client is a _Health Insurance company_ which provides health insurance for its customers. Now, they needs a model to predict if their last-year customers want to have their vehicle contract with this company or not.
 
 Prediction model helps the company to expand their business and plan their communication strategies to have more policyholders. So, they collect some information about the customers and their previous vehicle insurance contract and the payments to build the prediction model. The following is the informations.
 
-## Data Description
+### Data Description
 Following is the features used for the prediction model. The _Response_ shows the target value.
 
 
@@ -33,7 +34,7 @@ Following is the features used for the prediction model. The _Response_ shows th
 |Vintage|Number of Days, Customer has been associated with the company|
 |Response|1 : Customer is interested, 0 : Customer is not interested|
 
-### Features' Characteristics
+#### Features' Characteristics
 Features' characteristics are provided in [DataAnalysis_Insurance](https://bit.ly/3ExkHei)
 
 **1. Features Type**
@@ -58,10 +59,11 @@ _VEHICLE_AGE: More than 2 years_, _VEHICLE_DAMAGE:yes_, _PREVIOUSLY_INSURED:no_ 
 _PREVIOUSLY_INSURED_ had the highest mutual information.
 
 
-## Evaluation Metrics
+### Evaluation Metrics
 _AUC_ROC_Curve_ and _RMSE_ were used as evaluation Metrics.
 
-## Prediction Model
+### Prediction Model
 By evaluating different models, _XGBoost_ achieved the best result.
 
 
+# RUNNING INSTRUCTION
