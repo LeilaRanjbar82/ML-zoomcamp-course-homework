@@ -68,8 +68,11 @@ By evaluating different models, _XGBoost_ achieved the best result.
 
 # RUNNING INSTRUCTION
 ## File Description
+
 Folder [MidtermProject](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/tree/main/MidtermProject) includes following files:
+
 |File Name|Description|
+|---|---|
 |insurance_prediction.csv|Dataset|
 |DataAnalysis_insurance.ipynb|Exploratory Data Analysis & Feature important Analysis|
 |notebook.ipynb|Data preparation and cleaning & Model selection|
