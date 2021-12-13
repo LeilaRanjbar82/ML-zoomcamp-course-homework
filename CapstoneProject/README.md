@@ -141,11 +141,13 @@ from each pose folder (chair, cobra, ...):
 (You can find codes for 3.1 to 3.5 in notebook.ipynb)
 **TensorFlow** is a library for ML and AI, and **Keras** from tensorfolw provides a Python interface for TensorFlow. In **keras.layers** you can find different layers to creat your model. more info in [keras layers](https://keras.io/api/layers/)
 To classify the yoga images I used 7 model by combining layers and changing activation functions and optimizers.
+
 ### 3.1. Generate Dataset
 I used **Xception** package from **keras.application** to preprocess the data. The Specifications are:
 * Image size = (150,150)
 * Batch size = 20
 * Without Shuffilng
+
 ### 3.2. Training Different Model
 **3.2.1.** The first model was a simple model. The layers descriptions are as follows:
 * The base model is **Xception** with **imagenet** wight. Since in Keras, the top of a CNN is the dense layers, and the bottom is the convolutional part. I set the `include_top` to `False` to replace the Xception top.
@@ -168,7 +170,8 @@ I used **Xception** package from **keras.application** to preprocess the data. T
 How ever in deep learning two runs never follow each other, the best result dur to these model was for **3.2.5.**. The next step is tuning parameter.
 
 ### 3.3. Tuning Parameter
-Three parameter were choosed to tune, learning rate of optimizer, inner size of the inner dense layer, and drop rate for droping layer which is added before output layer.  
+Three parameter were choosed to tune, learning rate of optimizer, inner size of the inner dense layer, and drop rate for droping layer which is added before output layer.
+
 #### 3.3.1. Learning Rate
 Between four values of `0.0001, 0.001, 0.01, 0.1` the best performance was for 0.001.
 
@@ -190,7 +193,13 @@ The best drop rate among `0.0, 0.2, 0.5, 0.8` values was 0.2.
 ![image](https://user-images.githubusercontent.com/58926709/145894111-ed065492-e3e2-41f4-b920-c460cc718023.png)
 
 ### 3.4. Augmentation
+Augmentation is used to prepare poor images, have better performance. Images were changed in size, direction and also rotation.
+The result of Augmentation was not satisfying. However, changing the parameters and also parameters values may result in better performance. 
+Note that the augmentation is only applied to train set.
+
 ### 3.5. Choosing the best model and Checkpointing
+As mentined before the best result refered to a model with one inner dense layer, with _ADAM_ optimizer and _softmax_ output activation function. Using checkpointing to select the best model and save it due to validation accuracy.
+
 ### 3.6. Test the model
 ### 3.7. Preparing Script
 #### 3.7.1. Train
