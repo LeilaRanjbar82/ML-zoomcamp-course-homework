@@ -255,6 +255,17 @@ ipython
 ```
 
 #### 3.7.7. Create Docker file
+For creating Docker file the requirements are:
+```
+using python from public.ecr.aws/lambda/python:3.8
+installing keras-image-helper
+installing tflite_runtime from https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp38-cp38-linux_x86_64.whl(a special version accepted by aws)
+model: yoga_08_0.862.tflite .
+lambda_function.py .
+
+command: lambda_function.lambda_handler
+```
+
 ### 3.8. Deployemeny
 #### 3.8.1. Deploy and test the model locally
 #### 3.8.2. Deploy to cloud
