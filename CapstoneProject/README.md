@@ -1,7 +1,12 @@
 # PROJECT DESCRIPTION
 This project performed as part of the _ML Zoomcamp Course_, Capstone Project. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
 
-## Yoga Posture Image Classification By Convolutional Neural Network(CNN)
+# Yoga Posture Image Classification By Convolutional Neural Network(CNN)
+
+## Task DEscription
+
+
+## Data
 
 ### Data Refrence
 This Model was built using [kaggle Dataset](https://www.kaggle.com/suradechk/yoga-posture-cleaned).
@@ -130,7 +135,25 @@ from each pose folder (chair, cobra, ...):
 * The next 20% of images were copied to _validation/pose_ folder
 * The rest were copied to _test/pose_ folder
 
-
+## Create Model
+### Training Different Model
+### Tuning Parameter
+#### 1. Learning Rate
+#### 2. Inner size
+#### 3. Drop Rate
+### Augmentation
+### Choosing the best model and Checkpointing
+### Test the model
+### Preparing Script
+#### 1. Train
+#### 2. Predict
+#### 3. Predict_test and test the model by gunicorn
+#### 4. Create pipfile and pipfile.lock
+#### 5. Change format from .h5 to .tflite
+#### 6. Create Lambda Function
+#### 7. Create Docker file
+#### 8. Deploy and test the model locally
+#### 9. Deploy to cloud
 
 
 
