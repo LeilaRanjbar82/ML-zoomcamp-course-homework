@@ -139,24 +139,36 @@ from each pose folder (chair, cobra, ...):
 
 ## 3. Create Model
 (You can find codes for 3.1 to 3.5 in notebook.ipynb)
-### 3.1. Training Different Model
-### 3.2. Tuning Parameter
-#### 3.2.1. Learning Rate
-#### 3.2.2. Inner size
-#### 3.2.3. Drop Rate
-### 3.3. Augmentation
-### 3.4. Choosing the best model and Checkpointing
-### 3.5. Test the model
-### 3.6. Preparing Script
-#### 3.6.1. Train
-#### 3.6.2. Predict
-#### 3.6.3. Predict_test and test the model by gunicorn
-#### 3.6.4. Create pipfile and pipfile.lock
-#### 3.6.5. Change format from .h5 to .tflite
-#### 3.6.6. Create Lambda Function
-#### 3.6.7. Create Docker file
-#### 3.6.8. Deploy and test the model locally
-#### 3.6.9. Deploy to cloud
+**TensorFlow** is a library for ML and AI, and **Keras** from tensorfolw provides a Python interface for TensorFlow. In **keras.layers** you can find different layers to creat your model. more info in [keras layers](https://keras.io/api/layers/)
+To classify the yoga images I used 7 model by combining layers and changing activation functions and optimizers.
+### 3.1. Generate Dataset
+I used **Xception** package from **keras.application** to preprocess the data. The Specifications are:
+* Image size = (150,150)
+* Batch size = 20
+* Without Shuffilng
+### 3.2. Training Different Model
+1. The first model was a simple model. the layers descriptions are as follows:
+* The base model is **Xception** with **imagenet** wight. Since in Keras, the top of a CNN is the dense layers, and the bottom is the convolutional part. I set th `include_top` to `False` to replace the Xception top.
+* To avoid retraining the convolutional part of the network we have to set the `base_model.trainable` to `False`
+
+### 3.3. Tuning Parameter
+#### 3.3.1. Learning Rate
+#### 3.3.2. Inner size
+#### 3.3.3. Drop Rate
+### 3.4. Augmentation
+### 3.5. Choosing the best model and Checkpointing
+### 3.6. Test the model
+### 3.7. Preparing Script
+#### 3.7.1. Train
+#### 3.7.2. Predict
+#### 3.7.3. Predict_test and test the model by gunicorn
+#### 3.7.4. Create pipfile and pipfile.lock
+#### 3.7.5. Change format from .h5 to .tflite
+#### 3.7.6. Create Lambda Function
+#### 3.7.7. Create Docker file
+### 3.8. Deployemeny
+#### 3.8.1. Deploy and test the model locally
+#### 3.8.2. Deploy to cloud
 
 
 
