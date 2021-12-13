@@ -11,6 +11,8 @@ This file is used to introduce the files in [CapstoneProject](https://github.com
 * **lambda_function:** the same as predict function but it is used for serverless deployement, but it can be checked locally.
 * **test.py:** the test image url to test the lambda_function locally
 * **Docker**
+* **yoga_08_0.862.h5:** `.h5` model
+* **yoga_08_0.862.tflite:** `.tflit` model
 
 ## yoga-posture-cleaned: Dataset
 ## Help.md: CapstoneProject folder help
