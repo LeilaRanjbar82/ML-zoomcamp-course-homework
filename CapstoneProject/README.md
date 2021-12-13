@@ -265,9 +265,33 @@ lambda_function.py .
 
 command: lambda_function.lambda_handler
 ```
-
+#### 3.7.8. Containerization
+follow the commands:
+```
+docker build -t yoga-model .
+```
 ### 3.8. Deployemeny
 #### 3.8.1. Deploy and test the model locally
+Run the docker image
+```
+docker run -it --rm -p 8080:8080 yoga-model:latest
+```
+In another terminal follow the next command
+```
+python test.py
+```
+The result will be
+```
+{'chair': 0.012845357,
+ 'cobra': 0.017517198,
+ 'downdog': 0.9258903,
+ 'goddess': 0.008606592,
+ 'tree': 0.008768323,
+ 'warrior': 0.026372135}
+ ```
+ 
+ you can also find the test result in test.ipynb.
+
 #### 3.8.2. Deploy to cloud
 
 
