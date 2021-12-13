@@ -184,6 +184,11 @@ So retraining the model with more epochs = 15, showed that the `size = 500` is b
 ![image](https://user-images.githubusercontent.com/58926709/145893422-9e1fba90-2bce-450d-b070-5318d6a1c92c.png)
 
 #### 3.3.3. Drop Rate
+Due to the dataset, we may experience the overfitting. Using dropping layer to avoid it. On each epoch, different nodes were freezed, which means that their values are not updated.
+The best drop rate among `0.0, 0.2, 0.5, 0.8` values was 0.2.
+
+![image](https://user-images.githubusercontent.com/58926709/145894111-ed065492-e3e2-41f4-b920-c460cc718023.png)
+
 ### 3.4. Augmentation
 ### 3.5. Choosing the best model and Checkpointing
 ### 3.6. Test the model
