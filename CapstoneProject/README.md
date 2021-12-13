@@ -89,3 +89,54 @@ The process to Download is as follows:
 `[REF: https://www.analyticsvidhya.com/blog/2021/04/how-to-download-kaggle-datasets-using-jupyter-notebook/]`
 
 **P.S.** I have been uploaded the dataset in [Capstone Project](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/tree/main/CapstoneProject) (complete and splitted in the 3 folders, train, valisation, and test). You don't need to follow the structure. I put it here just for clarifying the process.
+
+### Split data in Train, Test, Validation
+(You can find codes in DataPreparation.ipynb)
+
+For the part, I used two packages `os` and `shutil`.
+
+`os.mkdir` is used to create the destination directories:
+
+**--train**
+* chair
+* cobra
+* downdog
+* goddess
+* tree
+* warrior
+    
+**--validation**
+* chair
+* cobra
+* downdog
+* goddess
+* tree
+* warrior
+    
+**--test**
+* chair
+* cobra
+* downdog
+* goddess
+* tree
+* warrior
+
+First I rename the files due to their classe by `os.rename`.
+
+Then, `shutil.copy` is used to copy the file from source to destination folders as follow:
+
+from each pose folder (chair, cobra, ...):
+* The first 60% of images were copied to _train/pose_ folder
+* The next 20% of images were copied to _validation/pose_ folder
+* The rest were copied to _test/pose_ folder
+
+
+
+
+
+
+
+
+
+
+
