@@ -148,9 +148,15 @@ I used **Xception** package from **keras.application** to preprocess the data. T
 * Without Shuffilng
 ### 3.2. Training Different Model
 1. The first model was a simple model. the layers descriptions are as follows:
-* The base model is **Xception** with **imagenet** wight. Since in Keras, the top of a CNN is the dense layers, and the bottom is the convolutional part. I set th `include_top` to `False` to replace the Xception top.
+* The base model is **Xception** with **imagenet** wight. Since in Keras, the top of a CNN is the dense layers, and the bottom is the convolutional part. I set the `include_top` to `False` to replace the Xception top.
 * To avoid retraining the convolutional part of the network we have to set the `base_model.trainable` to `False`
-
+* `keras.Input()` is an object that defines the shape of the input of our final model.
+* A pooling layer was created by `keras.layers.GlobalAveragePooling2D()` to get proper vector representations of the input.
+* The output layer is the Dense layer with output equals to number of classes, `keras.layers.Dense(6)`
+* By `keras.model(inputs, outputs)` the model is defined.
+* Dense layer is not trained. When initialized, its weights are set to random values. So, the optimizer, `keras.optimizers.Adam` is used to train the values of the weights by changing them on each training iteration in a way to creat output of the network make sense.
+* `keras.losses.CategoricalCrossentropy` is used to prepare loss function
+* We tied our model to optimizer, loss function and the metrics, interested in tracking, with `model.compile()`.
 ### 3.3. Tuning Parameter
 #### 3.3.1. Learning Rate
 #### 3.3.2. Inner size
