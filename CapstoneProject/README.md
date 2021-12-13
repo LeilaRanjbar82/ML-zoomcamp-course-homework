@@ -3,12 +3,12 @@ This project performed as part of the _ML Zoomcamp Course_, Capstone Project. Th
 
 # Yoga Posture Image Classification By Convolutional Neural Network(CNN)
 
-## Task DEscription
+## 1. Task Description
 
 
-## Data
+## 2. Data
 
-### Data Refrence
+### 2.1. Data Refrence
 This Model was built using [kaggle Dataset](https://www.kaggle.com/suradechk/yoga-posture-cleaned).
 
 Yoga posture dataset obtain from three following sites and applied basic data cleaning manually:
@@ -18,43 +18,7 @@ Yoga posture dataset obtain from three following sites and applied basic data cl
 
 (P.S. Kaggle dataset is a clean dataset)
 
-### Data Detail and Exploratory Data Analysis
-(You can find codes in notebook.ipynb)
-Yoga Posture Dataset consist of 2036 pictures in 6 different folder:
-
-|**ID** |**Pose** | **#Images** |
-|---|---|---|
-|1|Chair|206|
-|2|Cobra|643|
-|3|Downdog|430|
-|4|Goddes|209|
-|5|Tree|362|
-|6|Warrior|183|
-
-![image](https://user-images.githubusercontent.com/58926709/145874264-0540ceaa-d29a-47a3-824c-e936aaca8212.png)
-
-The image size of each class are plotted: 
-
-![image](https://user-images.githubusercontent.com/58926709/145874556-cc383984-06db-46fb-94c5-175be23b9ac0.png), ![image](https://user-images.githubusercontent.com/58926709/145874582-2a7072e4-0015-4460-b6fe-badd7859f7f2.png)
-
-![image](https://user-images.githubusercontent.com/58926709/145874645-c47153ea-4325-4bc8-9d74-1c38951afd59.png), ![image](https://user-images.githubusercontent.com/58926709/145874674-4569988c-40a0-4e24-b313-3c4d619b2565.png)
-
-![image](https://user-images.githubusercontent.com/58926709/145874705-ae8e0912-9cfa-4318-9ce1-91d9ef10dfb0.png), ![image](https://user-images.githubusercontent.com/58926709/145874750-d9c1dac9-2830-4f40-bd8d-74af40ea9c3c.png)
-
-Most of the image sizes are less than (1000 * 1000) pixels, just for _Cobra_ and _Downdog_ since thay have more images the sizes reached to (2000 * 2000) pixels.
-There are some outlayer in each set, I didn't clean them.
-
-In notebook I display some pictures to show the diversity of the images. They 8 first picture of each class. Following are few of them, one from each class.
-
-![image](https://user-images.githubusercontent.com/58926709/145875392-4595ad42-d0dc-4915-b4a1-d8dfe453570c.png)
-![image](https://user-images.githubusercontent.com/58926709/145875650-1f516e87-c0fe-42b5-81fb-3d74a8990322.png)
-![image](https://user-images.githubusercontent.com/58926709/145875680-1a7fdd9a-e21a-4443-b477-4db182929e4c.png)
-
-![image](https://user-images.githubusercontent.com/58926709/145875730-2b9a6ac4-07b2-4b2c-bf2c-e7164bf18e42.png)
-![image](https://user-images.githubusercontent.com/58926709/145875778-92d86bfc-4d37-40df-84e8-3d24bb9f80fc.png)
-![image](https://user-images.githubusercontent.com/58926709/145875814-7af865d2-9fe5-4f97-a3aa-54acb719711d.png)
-
-### Get the Data
+### 2.2. Get the Data
 (You can find codes in DataPreparation.ipynb)
 
 Before starting, you need to have the opendatasets library installed in your system. If it’s not present in your system, use Python’s package manager pip and run:
@@ -95,7 +59,45 @@ The process to Download is as follows:
 
 **P.S.** I have been uploaded the dataset in [Capstone Project](https://github.com/LeilaRanjbar82/ML-zoomcamp-course-homework/tree/main/CapstoneProject) (complete and splitted in the 3 folders, train, valisation, and test). You don't need to follow the structure. I put it here just for clarifying the process.
 
-### Split data in Train, Test, Validation
+### 2.3. Data Detail and Exploratory Data Analysis
+(You can find codes in notebook.ipynb)
+Yoga Posture Dataset consist of 2036 pictures in 6 different folder:
+
+|**ID** |**Pose** | **#Images** |
+|---|---|---|
+|1|Chair|206|
+|2|Cobra|643|
+|3|Downdog|430|
+|4|Goddes|209|
+|5|Tree|362|
+|6|Warrior|183|
+
+![image](https://user-images.githubusercontent.com/58926709/145874264-0540ceaa-d29a-47a3-824c-e936aaca8212.png)
+
+The image size of each class are plotted: 
+
+![image](https://user-images.githubusercontent.com/58926709/145874556-cc383984-06db-46fb-94c5-175be23b9ac0.png), ![image](https://user-images.githubusercontent.com/58926709/145874582-2a7072e4-0015-4460-b6fe-badd7859f7f2.png)
+
+![image](https://user-images.githubusercontent.com/58926709/145874645-c47153ea-4325-4bc8-9d74-1c38951afd59.png), ![image](https://user-images.githubusercontent.com/58926709/145874674-4569988c-40a0-4e24-b313-3c4d619b2565.png)
+
+![image](https://user-images.githubusercontent.com/58926709/145874705-ae8e0912-9cfa-4318-9ce1-91d9ef10dfb0.png), ![image](https://user-images.githubusercontent.com/58926709/145874750-d9c1dac9-2830-4f40-bd8d-74af40ea9c3c.png)
+
+Most of the image sizes are less than (1000 * 1000) pixels, just for _Cobra_ and _Downdog_ since thay have more images the sizes reached to (2000 * 2000) pixels.
+There are some outlayer in each set, I didn't clean them.
+
+In notebook I display some pictures to show the diversity of the images. They 8 first picture of each class. Following are few of them, one from each class.
+
+![image](https://user-images.githubusercontent.com/58926709/145875392-4595ad42-d0dc-4915-b4a1-d8dfe453570c.png)
+![image](https://user-images.githubusercontent.com/58926709/145875650-1f516e87-c0fe-42b5-81fb-3d74a8990322.png)
+![image](https://user-images.githubusercontent.com/58926709/145875680-1a7fdd9a-e21a-4443-b477-4db182929e4c.png)
+
+![image](https://user-images.githubusercontent.com/58926709/145875730-2b9a6ac4-07b2-4b2c-bf2c-e7164bf18e42.png)
+![image](https://user-images.githubusercontent.com/58926709/145875778-92d86bfc-4d37-40df-84e8-3d24bb9f80fc.png)
+![image](https://user-images.githubusercontent.com/58926709/145875814-7af865d2-9fe5-4f97-a3aa-54acb719711d.png)
+
+
+
+### 2.4. Split data in Train, Test, Validation
 (You can find codes in DataPreparation.ipynb)
 
 For the part, I used two packages `os` and `shutil`.
@@ -135,25 +137,25 @@ from each pose folder (chair, cobra, ...):
 * The next 20% of images were copied to _validation/pose_ folder
 * The rest were copied to _test/pose_ folder
 
-## Create Model
-### Training Different Model
-### Tuning Parameter
-#### 1. Learning Rate
-#### 2. Inner size
-#### 3. Drop Rate
-### Augmentation
-### Choosing the best model and Checkpointing
-### Test the model
-### Preparing Script
-#### 1. Train
-#### 2. Predict
-#### 3. Predict_test and test the model by gunicorn
-#### 4. Create pipfile and pipfile.lock
-#### 5. Change format from .h5 to .tflite
-#### 6. Create Lambda Function
-#### 7. Create Docker file
-#### 8. Deploy and test the model locally
-#### 9. Deploy to cloud
+## 3. Create Model
+### 3.1. Training Different Model
+### 3.2. Tuning Parameter
+#### 3.2.1. Learning Rate
+#### 3.2.2. Inner size
+#### 3.2.3. Drop Rate
+### 3.3. Augmentation
+### 3.4. Choosing the best model and Checkpointing
+### 3.5. Test the model
+### 3.6. Preparing Script
+#### 3.6.1. Train
+#### 3.6.2. Predict
+#### 3.6.3. Predict_test and test the model by gunicorn
+#### 3.6.4. Create pipfile and pipfile.lock
+#### 3.6.5. Change format from .h5 to .tflite
+#### 3.6.6. Create Lambda Function
+#### 3.6.7. Create Docker file
+#### 3.6.8. Deploy and test the model locally
+#### 3.6.9. Deploy to cloud
 
 
 
