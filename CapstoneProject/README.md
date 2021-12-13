@@ -4,7 +4,7 @@ This project performed as part of the _ML Zoomcamp Course_, Capstone Project. Th
 # Yoga Posture Image Classification By Convolutional Neural Network(CNN)
 
 ## 1. Task Description
-
+The yoga posture images are provided in 6 classes. I used this dataset to use CNN models, check different models and actiovation functions and tuning the model parameters and augmentation. I beleive that the dataset was a good dataset for learning and testing CNN. 
 
 ## 2. Data
 
