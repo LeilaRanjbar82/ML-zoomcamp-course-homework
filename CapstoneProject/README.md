@@ -147,18 +147,33 @@ I used **Xception** package from **keras.application** to preprocess the data. T
 * Batch size = 20
 * Without Shuffilng
 ### 3.2. Training Different Model
-1. The first model was a simple model. the layers descriptions are as follows:
+**3.2.1.** The first model was a simple model. The layers descriptions are as follows:
 * The base model is **Xception** with **imagenet** wight. Since in Keras, the top of a CNN is the dense layers, and the bottom is the convolutional part. I set the `include_top` to `False` to replace the Xception top.
 * To avoid retraining the convolutional part of the network we have to set the `base_model.trainable` to `False`
 * `keras.Input()` is an object that defines the shape of the input of our final model.
-* A pooling layer was created by `keras.layers.GlobalAveragePooling2D()` to get proper vector representations of the input.
-* The output layer is the Dense layer with output equals to number of classes, `keras.layers.Dense(6)`
+* A pooling layer was created by `keras.layers.GlobalAveragePooling2D()` to get proper vector representations of the input, reduce the size of the feature map.
+* The output layer is the Dense layer with output equals to number of classes, `keras.layers.Dense(6)`.
 * By `keras.model(inputs, outputs)` the model is defined.
 * Dense layer is not trained. When initialized, its weights are set to random values. So, the optimizer, `keras.optimizers.Adam` is used to train the values of the weights by changing them on each training iteration in a way to creat output of the network make sense.
-* `keras.losses.CategoricalCrossentropy` is used to prepare loss function
+* `keras.losses.CategoricalCrossentropy` is used to prepare loss function.
 * We tied our model to optimizer, loss function and the metrics, interested in tracking, with `model.compile()`.
+**3.2.2.** The inner layer with output size = 100 and _ReLU_ activation function is added to  previous model, `keras.layers.Dense` 
+**3.2.3.** `keras.layers.Flatten` is applied after vectorization.
+**3.2.4.** Change the optimizer from _ADAM_ to _SGD_.
+**3.2.5.** Use _ADAM_ optimizer. The output Dense layer activation function was set to _softmax_, so the loss function `from_logits` was changed to `False`.
+**3.2.6.** _MaxPooling2D_ is used instead of _GlobalAveragePooling2D_ in pooling layer. The result was't good at all.
+**3.2.7.** Using _softmax_ activation fuction for the output layer and _SGD_ for Optimization. _ADAM_ optimizer performed better.
+**3.2.8.** Add second Inner Layer with output size = 500 and _SeLU_ activation function.
+
+How ever in deep learning two runs never follow each other, the best result dur to these model was for **3.2.5.**. The next step is tuning parameter.
+
 ### 3.3. Tuning Parameter
+Three parameter were choosed to tune, learning rate of optimizer, inner size of the inner dense layer, and drop rate for droping layer which is added before output layer.  
 #### 3.3.1. Learning Rate
+Between four values of `0.0001, 0.001, 0.01, 0.1` the best performance was for 0.001.
+
+![image](https://user-images.githubusercontent.com/58926709/145892853-8ee15b04-722a-4c9e-8183-ffdd1d8d25ba.png)
+
 #### 3.3.2. Inner size
 #### 3.3.3. Drop Rate
 ### 3.4. Augmentation
