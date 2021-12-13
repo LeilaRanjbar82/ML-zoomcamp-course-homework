@@ -138,7 +138,7 @@ from each pose folder (chair, cobra, ...):
 * The rest were copied to _test/pose_ folder
 
 ## 3. Create Model
-(You can find codes for 3.1 to 3.5 in notebook.ipynb)
+(You can find codes for 3.1 to 3.6 in notebook.ipynb)
 **TensorFlow** is a library for ML and AI, and **Keras** from tensorfolw provides a Python interface for TensorFlow. In **keras.layers** you can find different layers to creat your model. more info in [keras layers](https://keras.io/api/layers/)
 To classify the yoga images I used 7 model by combining layers and changing activation functions and optimizers.
 
@@ -198,16 +198,62 @@ The result of Augmentation was not satisfying. However, changing the parameters 
 Note that the augmentation is only applied to train set.
 
 ### 3.5. Choosing the best model and Checkpointing
-As mentined before the best result refered to a model with one inner dense layer, with _ADAM_ optimizer and _softmax_ output activation function. Using checkpointing to select the best model and save it due to validation accuracy.
+As mentined before the best result refered to a model with one inner dense layer, with _ADAM_ optimizer and _softmax_ output activation function. Using checkpointing to select the best model and save it due to validation accuracy. The model file is `yoga_08_0.862.h5`.
 
 ### 3.6. Test the model
+The tuned model is test for a downdog image from test folder. The result:
+```
+{'chair': 7.7301534e-05,
+ 'cobra': 7.975984e-05,
+ 'downdog': 0.9998079,
+ 'goddess': 1.6248295e-07,
+ 'tree': 1.1697032e-06,
+ 'warrior': 3.3702236e-05}
+```
+The downdog value is the highest.
+
 ### 3.7. Preparing Script
+To use the model I prepared different script. Before using script you have to download the dataset from data folder, save it in a capstone project folder in your computer and unzip it.
 #### 3.7.1. Train
+Train the model and save the models using checkpoint. Now, we have to choose the best model manually.
 #### 3.7.2. Predict
+Predict the output of the model. It is saves using flask.
+In terminal you can use this command to run it.
+```
+gunicorn --bind 0.0.0.0:8080 predict:app
+```
 #### 3.7.3. Predict_test and test the model by gunicorn
+The test file is the same as notebook test. After runnig predict, you can use following command in new terminal:
+```
+python predict_test.py
+```
+The result will be the same as 3.6.
+
 #### 3.7.4. Create pipfile and pipfile.lock
+Create pipfiles to have all required file for create model, because for predicting we remove tensorflow dependencies of the model. Tensorflsion ow package is a large package. We use the lighter version called _tflite_. But I prepared pipfile and pipfile.lock with numpy, tensorflow, flask and gunicorn packages.
+To create pipfiles, first we need to install `pipenv`. The command is:
+```
+pip install pipenv
+```
+then we install packages as follows:
+```
+pipenv install numpy tensorflow flask gunicorn
+```
+
 #### 3.7.5. Change format from .h5 to .tflite
+The script `tflitemodel.py` is used to convert the model. However I put both `.h5` and `.tflite` model in the directory in github.
+
 #### 3.7.6. Create Lambda Function
+Lambda function perform like predict file but it is used for serverless AWS deployement, however we can test it locally.
+The process is:
+```
+ipython
+
+[1]: import lambda_function
+[2]: event = {'url':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIPLzGVtV2MDVS8PSUsr7WpM-L91TEVxjp1Q&usqp=CAU'}
+[3]: lambda_function.lambda_handler(event, None)
+```
+
 #### 3.7.7. Create Docker file
 ### 3.8. Deployemeny
 #### 3.8.1. Deploy and test the model locally
