@@ -175,6 +175,14 @@ Between four values of `0.0001, 0.001, 0.01, 0.1` the best performance was for 0
 ![image](https://user-images.githubusercontent.com/58926709/145892853-8ee15b04-722a-4c9e-8183-ffdd1d8d25ba.png)
 
 #### 3.3.2. Inner size
+The best inner size among `50, 100, 200, 500`, shows the competance between `100` and `500`. 
+
+![image](https://user-images.githubusercontent.com/58926709/145893386-2e6c859f-fc1e-41de-a4e6-00de92e11ae0.png)
+
+So retraining the model with more epochs = 15, showed that the `size = 500` is better.
+
+![image](https://user-images.githubusercontent.com/58926709/145893422-9e1fba90-2bce-450d-b070-5318d6a1c92c.png)
+
 #### 3.3.3. Drop Rate
 ### 3.4. Augmentation
 ### 3.5. Choosing the best model and Checkpointing
