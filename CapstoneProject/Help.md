@@ -11,9 +11,11 @@ This file is used to introduce the files in [CapstoneProject](https://github.com
 * **lambda_function:** the same as predict function but it is used for serverless deployement, but it can be checked locally.
 * **test.py:** the test image url to test the lambda_function locally
 * **Docker**
-* **yoga_08_0.862.h5:** `.h5` model
-* **yoga_08_0.862.tflite:** `.tflit` model
 
 ## yoga-posture-cleaned: Dataset
 ## Help.md: CapstoneProject folder help
 ## README.md: Project Description
+
+Since I couldn't push my large files to github you can download the model file from my google drive.
+* **yoga_08_0.862.h5:** `.h5` model [h5link](https://drive.google.com/drive/folders/1CKu7hcxSxO8r2zUqebE0f0O6hyGCW-td?usp=sharing)
+* **yoga_08_0.862.tflite:** `.tflit` model [tflitelink](https://drive.google.com/drive/folders/1CKu7hcxSxO8r2zUqebE0f0O6hyGCW-td?usp=sharing)
